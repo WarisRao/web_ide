@@ -3,20 +3,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-const paths={
-    DIST:path.resolve(__dirname,'dist'),
-    JS:path.resolve(__dirname,'src/js'),
-    SRC:path.resolve(__dirname,'src'),
-};
-
 
 module.exports={
     
-    entry:path.join(paths.JS,'app.js'),
+    entry:path.join(__dirname,'./src/js/index.js'),
     
     output:{
-        path:paths.DIST,
-        filename:'app.bundle.js'
+        path:path.join(__dirname,'./dist/'),
+        filename:'bundle.js'
     },
     
     devtool:'inline-source-map',
@@ -28,7 +22,7 @@ module.exports={
     plugins:[
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            template:path.join(paths.SRC,'index.html'),
+            template:path.join(__dirname,'./src/index.html'),
         }),
         new ExtractTextPlugin('style.bundle.css'),
     ],
