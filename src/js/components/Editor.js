@@ -7,7 +7,7 @@ import editroActions from '../actions/editorActions';
 import '../../css/editor.css'
 
 const mapStateToProps = (state)=>{
-    return {state:state.explorer};
+    return {state:state.filesData};
 }
 
 const mapDispatchToProps = (dispatch)=>({
@@ -30,14 +30,13 @@ class Editor extends React.Component{
     }
 
     save(e){
-        console.log('i save');
         let data=this.state.data;
         this.props.editroActions.saveFile({data});
         
     }
 
     render(){
-        console.log('local state:',this.state);
+
         return(
             <EditorMarkup 
                 state={this.props.state}

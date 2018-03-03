@@ -33,8 +33,17 @@ const explorer =(state={},action)=>{
                     newState4.files[action.payload.index].edit=false;
                 }
             }
-            console.log('newstate4',newState4);
             return newState4;
+
+        case actionTypes.SAVE_FILE:
+            const newState5=Object.assign({},state);
+
+            newState5.files.forEach((file)=>{
+                if(file.name===newState5.currentFile.name){
+                    file.data=action.payload.data;
+                }
+            });
+            return newState5;
 
         default:
             return state;

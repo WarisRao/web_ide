@@ -1,5 +1,5 @@
 const initialState= {
-    explorer:{ 
+    filesData:{ 
         files:[{
             name:'firstFile',
             data:'this is file1 data',

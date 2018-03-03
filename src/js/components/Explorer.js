@@ -8,7 +8,7 @@ import '../../css/explorer.css';
 
 const mapStateToProps =(state)=>{
     
-    return {state:state.explorer};
+    return {state:state.filesData};
 }
  
  const mapDispatchToProps=(dispatch)=>({
