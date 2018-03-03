@@ -1,0 +1,21 @@
+div{
+    padding: 5px;
+    margin: 5px;
+}
+
+.upperTab{
+    border:1px solid red;
+    width: 100%;
+    padding: 5px;
+}
+
+.explorer{
+    border:1px solid red;
+   
+}
+
+.editor{
+    border:1px solid red;   
+    
+    height:200px;
+}

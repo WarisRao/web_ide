@@ -5,13 +5,14 @@ import LoginPage from './Login';
 import AboutPage from './About';
 import NotFoundPage from './NotFound';
 import MainPage from './Main';
+import '../../css/app.css';
 
 export default class App extends React.Component{
 
     render(){
         return(
         <div>
-
+            <div className="header" >
             <ul>
                 <li>
                     <Link  to='/'>Home</Link>
@@ -27,7 +28,9 @@ export default class App extends React.Component{
                 </li>
                 
             </ul>
+            </div>
 
+            <div className="routes" >
             <Switch>
                 <Route exact path='/' component={HomePage} />
                 <Route path='/login' component={LoginPage}/>
@@ -35,6 +38,7 @@ export default class App extends React.Component{
                 <Route path='/main' component={MainPage} />
                 <Route component={NotFoundPage}/>
             </Switch>
+            </div>
         </div>
         )
     }

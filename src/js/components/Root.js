@@ -6,8 +6,11 @@ import history from '../history';
 import store from '../store/index';
 import App from './App';
 
+import '../../css/root.css';
 export default class Root extends React.Component{
+    
     render(){
+        
         return(
             <Provider store={store} >
                 <Router history={history} >
