@@ -9,3 +9,5 @@ export const DELETE_FILE="deleteFile";
 export const RENAME_FILE="renameFile";
 
 export const SAVE_FILE="saveFile";
+
+export const CLOSE_FILE="closeFile";

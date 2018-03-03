@@ -1,5 +1,6 @@
 const initialState= {
     filesData:{ 
+        
         files:[{
             name:'firstFile',
             data:'this is file1 data',
@@ -11,11 +12,21 @@ const initialState= {
             edit:false
         }
         ],
+        
         currentFile:{
             name:'',
             data:''
         },
+        
+        openedFiles:[
+
+        ],
+        
     }
 };
+
+initialState.filesData.openedFiles=[
+    initialState.filesData.files[0],
+]
 
 export default initialState;

@@ -3,11 +3,14 @@ import React from 'react';
 const ExplorerMarkup =({newFileState,state,onCreate,onFileSelect,onFileEdit})=>{
 
         const lists=state.files.map((file,index)=>(
-        <div key={index}>
-        <li contentEditable={file.edit} data-number={index} onDoubleClick={onFileSelect} onInput={onFileEdit} >{file.name}</li>
-        <button  data-number={index} name="renameFile" onClick={onFileEdit} >Rename</button>
-        <button  data-number={index} name="deleteFile" onClick={onFileEdit} >Delete</button>
-        </div>
+        
+        <li key={index} contentEditable={file.edit} data-number={index} onDoubleClick={onFileSelect} onInput={onFileEdit} >
+            {file.name}
+            <button  data-number={index} name="renameFile" onClick={onFileEdit} >Rename</button>
+            <button  data-number={index} name="deleteFile" onClick={onFileEdit} >Delete</button>
+        </li>
+        
+        
         ));
 
 
