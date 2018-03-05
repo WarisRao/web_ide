@@ -11,16 +11,38 @@ const explorer =(state={},action)=>{
 
        
         case actionTypes.SELECT_FILE:
+            
             const newState2=Object.assign({},state);
-            newState2.currentFile = newState2.files[action.payload.index];
+            
+            let index;
+            
+            
+            index=action.payload.index;
+
+
+            if(action.payload.origin==='upperTab'){
+                
+                newState2.files.forEach((file,i)=>{
+                    
+                    if(file.name===newState2.openedFiles[action.payload.index].name){
+                        
+                        index=i;
+                        
+                    }
+
+                });
+            }
+
+
+            newState2.currentFile = newState2.files[index];
             
             let checkOpened = newState2.openedFiles.filter(
                 (file)=>{
-                    return file.name===newState2.files[action.payload.index].name;
+                    return file.name===newState2.files[index].name;
                 });
 
             if(checkOpened.length===0){
-                newState2.openedFiles = [ newState2.files[action.payload.index],
+                newState2.openedFiles = [ newState2.files[index],
                                             ...newState2.openedFiles];
                 }
 
@@ -67,7 +89,11 @@ const explorer =(state={},action)=>{
             newState6.openedFiles=[...newState6.openedFiles.slice(0,action.payload.index),
                                     ...newState6.openedFiles.slice(action.payload.index+1)
                                   ]                   
-
+            
+            if(newState6.openedFiles.length===0){
+                newState6.currentFile={};
+            }                      
+                        
             return newState6;
 
 

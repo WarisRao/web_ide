@@ -1,12 +1,12 @@
 import React from 'react';
 
-const EditorMarkup =({state,onDataChange,onSave})=>{
+const EditorMarkup =({currentFile,onDataChange,onSave})=>{
     return (
      <div style={{'height':'80%'}} > 
-        <div id="editor" contentEditable={state.currentFile.name!==""} onInput={onDataChange} >
-            {state.currentFile.data}
+        <div id="editor" contentEditable={currentFile.name!==""} onInput={onDataChange} >
+            {currentFile.data}
         </div>
-        { state.currentFile.name!=='' && <button name="save" onClick={onSave}>Save</button>}
+        { currentFile.name!=='' && <button name="save" onClick={onSave}>Save</button>}
     </div>
     )
 };

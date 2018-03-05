@@ -25,8 +25,5 @@ const initialState= {
     }
 };
 
-initialState.filesData.openedFiles=[
-    initialState.filesData.files[0],
-]
 
 export default initialState;

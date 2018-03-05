@@ -14,7 +14,7 @@ import upperTabActions from '../actions/upperTabActions';
     
     fileSelect(e){
         const index=Number(e.target.getAttribute('data-number'));
-        this.props.upperTabActions.selectFile({index});
+        this.props.upperTabActions.selectFile({index,origin:'upperTab'});
     }
 
     fileClose(e){
