@@ -3,19 +3,25 @@ div{
     margin: 5px;
 }
 
+.main{
+    border:1px solid darkslategrey;
+    display: flex;
+    flex-direction: column;
+    
+}
+
 .upperTab{
-    border:1px solid red;
-    width: 100%;
-    padding: 5px;
+    border:1px solid darkslategrey;
+    flex-grow: 5;
 }
 
 .explorer{
-    border:1px solid red;
-   
+    border:1px solid darkslategrey;
+    flex-grow:2;
 }
 
 .editor{
-    border:1px solid red;   
-    
+    border:1px solid darkslategrey;   
+    flex-grow: 4;
     height:200px;
 }

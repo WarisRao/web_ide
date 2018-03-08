@@ -7,7 +7,7 @@ import '../../css/main.css';
 export default class Main extends React.Component{
     render(){
         return(
-            <div>
+            <div className="main">
                <div className="upperTab" > <UpperTab/> </div>
             
                <div className="explorer" > <Explorer/> </div>

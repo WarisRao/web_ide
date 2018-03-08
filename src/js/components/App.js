@@ -13,17 +13,17 @@ export default class App extends React.Component{
         return(
         <div>
             <div className="header" >
-            <ul>
-                <li>
+            <ul id="headerUl">
+                <li id="homeLi">
                     <Link  to='/'>Home</Link>
                 </li>
-                <li>
+                <li id="mainLi" >
                     <Link  to='/main'>Main</Link>
                 </li>
-                <li>
+                <li id="loginLi" >
                     <Link to='/login'>Login</Link>
                 </li>
-                <li>
+                <li id="aboutLi" >
                     <Link to='/about'>About</Link>
                 </li>
                 

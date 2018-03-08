@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators, combineReducers} from 'redux';
 import upperTabActions from '../actions/upperTabActions';   
 
+import '../../css/upperTab.css';
  class UpperTab extends React.Component{
     constructor(props){
         super(props);

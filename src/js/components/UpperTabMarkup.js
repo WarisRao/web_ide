@@ -4,7 +4,7 @@ const UpperTabMarkup =({state,onFileClose,onFileSelect})=>{
     
     let tabs =state.openedFiles.map((file,index)=>{
         return (
-            <div key={index}>
+            <div className="upperTabs" key={index}>
                 <span data-number={index} onDoubleClick={onFileSelect} >
                     {file.name}       
                 </span>
@@ -14,7 +14,7 @@ const UpperTabMarkup =({state,onFileClose,onFileSelect})=>{
     });
     
     return(
-    <div>
+    <div id="upperTabDiv">
         {tabs}
     </div>
     );

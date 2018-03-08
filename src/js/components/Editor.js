@@ -36,10 +36,10 @@ class Editor extends React.Component{
         });
        
         console.log('state in change imid:',this.state);
-
+/* 
         const newState = Object.assign({},this.state);
         
-    /*   newState.files.forEach((file)=>{
+        newState.files.forEach((file)=>{
             
             if(file.name === this.props.state.currentFile.name){
                 file.data=data;
